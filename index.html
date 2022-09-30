@@ -1,12 +1,428 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="css/main.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flowbite@1.5.1/dist/flowbite.min.css"
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
     <title>BLoger</title>
-</head>
-<body>
-    <h1 class="text-red-600">Hamid</h1>
-</body>
+  </head>
+  <body>
+    <header class="bg-cta">
+      <nav
+        class="relative top-14 left-0 right-0 container mx-auto flex flex-row items-center justify-between p-1 w-3/4"
+      >
+        <div
+          class="flex flex-row items-center justify-between w-2/3 bg-transparent"
+        >
+          <img src="./images/logo.svg" alt="logo" />
+          <div class="hidden lg:block">
+            <select
+              name="List"
+              class="pr-8 pl-2 bg-transparent border-none overflow-hidden"
+            >
+              <option value="Product" class="font-bold hover:bg-gray-300">
+                Product
+              </option>
+              <option value="Overview">Overview</option>
+              <option value="Pricing">Pricing</option>
+              <option value="Feature">Feature</option>
+              <option value="Interrogation">Interrogation</option>
+            </select>
+
+            <select
+              name="secondList"
+              class="pr-12 pl-3 bg-transparent border-none overflow-hidden"
+            >
+              <option value="Product" class="font-bold hover:bg-gray-300">
+                Company
+              </option>
+              <option value="About">About</option>
+              <option value="Team">Team</option>
+              <option value="Blog">Blog</option>
+              <option value="Careers">Careers</option>
+            </select>
+            <select
+              name="secondList"
+              class="pr-8 pl-2 bg-transparent border-none overflow-hidden"
+            >
+              <option value="Product" class="font-bold hover:bg-gray-300">
+                Connects
+              </option>
+              <option value="Contacts">Contacts</option>
+              <option value="Newsletter">Newsletter</option>
+              <option value="LinkedIn">LinkedIn</option>
+            </select>
+          </div>
+        </div>
+        <div class="hidden flex-row items-center justify-right lg:flex">
+          <button
+            class="px-6 py-2 rounded-full border border-solid border-transparent text-White font-bold hover:bg-VeryLightRed_CTA_hover_background hover:text-White hover:border-white transition-all ease-linear ease"
+          >
+            Login
+          </button>
+          <button
+            class="px-6 py-2 bg-White rounded-full ml-2 text-LightRed font-bold hover:bg-VeryLightRed_CTA_hover_background hover:text-White hover:border-LightRed transition-all ease-linear ease"
+          >
+            Sign up
+          </button>
+        </div>
+        <button
+          id="menu-btn"
+          class="block hamburger lg:hidden focus:outline-none"
+        >
+          <span class="hamburger-top"></span>
+          <span class="hamburger-middle"></span>
+          <span class="hamburger-bottom"></span>
+        </button>
+      </nav>
+    </header>
+    <div class="lg:hidden">
+      <div
+        id="menu"
+        class="absolute flex-col items-center hidden self-end py-32 mt-12 space-y-10 font-bold bg-white mx-auto w-5/6 sm:self-center left-0 right-0 drop-shadow-md"
+      >
+        <select
+          name="List"
+          class="pr-4 pl-2 bg-transparent border-none overflow-hidden"
+        >
+          <option value="Product" class="font-bold hover:bg-gray-300">
+            Product
+          </option>
+          <option value="Overview">Overview</option>
+          <option value="Pricing">Pricing</option>
+          <option value="Feature">Feature</option>
+          <option value="Interrogation">Interrogation</option>
+        </select>
+
+        <select
+          name="secondList"
+          class="pr-12 pl-3 bg-transparent border-none overflow-hidden"
+        >
+          <option value="Product" class="font-bold hover:bg-gray-300">
+            Company
+          </option>
+          <option value="About">About</option>
+          <option value="Team">Team</option>
+          <option value="Blog">Blog</option>
+          <option value="Careers">Careers</option>
+        </select>
+        <select
+          name="secondList"
+          class="pr-9 pl-2 bg-transparent border-none overflow-hidden"
+        >
+          <option value="Product" class="font-bold hover:bg-gray-300">
+            Connects
+          </option>
+          <option value="Contacts">Contacts</option>
+          <option value="Newsletter">Newsletter</option>
+          <option value="LinkedIn">LinkedIn</option>
+        </select>
+      </div>
+    </div>
+
+    <main>
+      <section class="bg-cta">
+        <div class="bg-cta flex flex-col items-start justify-center" id="hero">
+          <div class="my-0 p-7  mx-auto lg lg:my-20">
+            <h1
+              class="text-2xl text-White text-center font-bold mt-20 md:text-4xl lg:text-5xl lg:mt-7"
+            >
+              A modren publishing platform
+            </h1>
+            <p class="text-sm mt-4 text-center text-white opacity-90 md:text-md">
+              grow your audience and hold your brand
+            </p>
+
+            <div class="flex flex-row items-center justify-center mt-7">
+              <button
+                class="px-5 py-2 bg-White rounded-full mr-5 text-LightRed font-bold hover:bg-VeryLightRed_CTA_hover_background hover:text-White transition-all ease-linear ease"
+              >
+                Start For Free
+              </button>
+              <button
+                class="px-4 py-2 rounded-full text-White font-bold border border-White border-solid hover:bg-VeryLightRed_CTA_hover_background hover:text-White hover:border-LightRed transition-all ease-linear ease"
+              >
+                Learn more
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--description  -->
+      <section id="description">
+        <h1
+          class="text-2xl text-center mt-32 text-VeryDarkBlue_headings font-bold md:text-3xl"
+        >
+          Designed for the future
+        </h1>
+        <div
+          class="overflow-hidden flex flex-col-reverse justify-center items-center text-center lg:text-left lg:pb-32 lg:pt-12 lg:justify-between lg:flex-row"
+        >
+          <div class="flex flex-col mt-12 pl-0 pr-0 lg:pl-20 lg:pr-2">
+            <div class="max-w-lg">
+              <h1
+                class="text-2xl px-12 text-VeryDarkBlue_headings font-bold lg:text-2xl md:px-0"
+              >
+                Introducing an extensible editor
+              </h1>
+              <p class="mt-3 text-md px-3 md:text-sm md:px-0">
+                Blogr features an exceedingly intuitive interface which lets you
+                focus on one thing: creating content. The editor supports
+                management of multiple blogs and allows easy manipulation of
+                embeds such as images. videos, and Markdown. Extensibility with
+                plugins and themes provide easy ways to add functionality or
+                change the looks of a blog.
+              </p>
+            </div>
+            <div class="mt-8 max-w-lg">
+              <h1
+                class="text-2xl px-16 text-VeryDarkBlue_headings font-bold md:px-0 lg:text-2xl"
+              >
+                Robust content management
+              </h1>
+              <p class="mt-3 text-md px-3 md:text-sm md:px-0">
+                Flexible content management enables users to easily move through
+                posts. Increase the usability of your blog by adding customized
+                categories. sections. format, or flow. With this functionality,
+                you're in full control.
+              </p>
+            </div>
+          </div>
+          <div
+            class="w-3/4 lg:relative lg:w-1/2 flex flex-col items-center justify-center lg:-mr-52"
+          >
+            <img
+              src="./images/illustration-editor-desktop.svg"
+              alt=""
+              class="w-full hidden lg:block absolute m"
+            />
+            <img
+              src="./images/illustration-editor-mobile.svg"
+              alt=""
+              class="mt-10 w-full block lg:hidden"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- ARt Structure -->
+
+      <section class="mt-32 lg:mt-12">
+        <div
+          id="state"
+          class="flex flex-col bg-system h-auto items-center justify-center lg:h-80 py-12"
+        >
+          <img
+            src="./images/illustration-phones.svg"
+            alt="mobile"
+            id="circle-bg"
+            class="w-3/4 md:w-1/2 -mt-32 static lg:absolute left-20 -ml-2 p-8 lg:-mt-0 lg:w-2/5"
+          />
+
+          <div
+            class="mt-5 ml-0 w-full text-center py-3 text-White px-0 max-w-sm lg:max-w-xl lg:ml-96 lg:text-left lg:px-5"
+          >
+            <h1 class="text-xl md:text-2xl lg:text-4xl">
+              State of the Art Infrastructure
+            </h1>
+            <p class="text-sm mt-2 md:text-md lg:tracking-widest">
+              With reliability and speed in mind, worldwide data centers provide
+              the backbone for ultra-fast connectivity. This ensures your site
+              will load instantly, no matter where your readers are. keeping
+              your site competitive.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="tutorial" class="mt-32">
+        <div class="flex flex-col lg:flex-row items-center justify-between">
+          <img
+            src="./images/illustration-laptop-desktop.svg"
+            alt="laptop"
+            class="w-3/4 lg:w-1/2 -ml-0 lg:-ml-52"
+          />
+          <div class="w-3/4 flex flex-col lg:space-y-12">
+            <div class="mx-auto text-center lg:mx-44 lg:text-left">
+              <h1
+                class="text-VeryDarkBlue_headings font-bold text-xl my-5 tracking-widest md:text-2xl lg:3xl"
+              >
+                Free, open, simple
+              </h1>
+              <p class="text-sm md:text-md">
+                Blogr is a free and open source application backed by a large
+                community of helpful developers. It supports features such as
+                code syntax highlighting. RSS feeds, social media integration,
+                third-party commenting tools, and works seamlessly with Google
+                Analytics. The architecture is clean and is relatively eas3 to
+                learn.
+              </p>
+            </div>
+            <div class="mx-auto text-center lg:mx-44 lg:text-left">
+              <h1
+                class="text-VeryDarkBlue_headings font-bold text-xl my-5 tracking-widest md:text-2xl lg:3xl"
+              >
+                Powerful tooling
+              </h1>
+              <p class="text-sm md:text-md">
+                Batteries included. We built a simple and straightforward CLI
+                tool that makes customization and deployment a breeze, but
+                capable of producing even the most complicated sites.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer">
+      <div
+        class="footer mt-20 bg-VeryDarkBlackBlue_footerBackground flex flex-col items-start justify-start lg:flex-row py-12"
+      >
+        <div class="w-full lg:w-1/5 mx-0 mt-2 py-4 px-2 lg:mx-12">
+          <a href="#">
+            <img src="./images/logo.svg" alt="logo" class="mx-auto" />
+          </a>
+        </div>
+
+        <div
+          class="w-full flex flex-col justify-center space-x-0 text-GrayishBlue_footerText lg:space-x-2 lg:justify-between lg:w-1/2 lg:flex-row"
+        >
+          <div
+            class="text-center text-md flex flex-col space-y-2 px-6 lg:text-left"
+          >
+            <a href="#" class="font-bold text-lg mt-8 mb-4">Product</a>
+            <a
+              href="#"
+              class="hover:underline hover:my-1 ease-linear transition-all"
+              >Overview</a
+            >
+            <a
+              href="#"
+              class="hover:underline hover:my-1 ease-linear transition-all"
+              >Pricing</a
+            >
+            <a
+              href="#"
+              class="hover:underline hover:my-1 ease-linear transition-all"
+              >Marketing</a
+            >
+            <a
+              href="#"
+              class="hover:underline hover:my-1 ease-linear transition-all"
+              >Feature</a
+            >
+            <a
+              href="#"
+              class="hover:underline hover:my-1 ease-linear transition-all"
+              >Interrogation</a
+            >
+          </div>
+          <div
+            class="text-center text-md flex flex-col space-y-2 px-6 lg:text-left"
+          >
+            <a href="#" class="font-bold text-lg mt-8 mb-4">Company</a>
+
+            <a
+              href="#"
+              class="hover:underline hover:my-1 ease-linear transition-all"
+              >About</a
+            >
+            <a
+              href="#"
+              class="hover:underline hover:my-1 ease-linear transition-all"
+              >Team</a
+            >
+            <a
+              href="#"
+              class="hover:underline hover:my-1 ease-linear transition-all"
+              >Blog</a
+            >
+            <a
+              href="#"
+              class="hover:underline hover:my-1 ease-linear transition-all"
+              >Careers</a
+            >
+          </div>
+          <div
+            class="text-center text-md flex flex-col space-y-2 px-6 lg:text-left"
+          >
+            <a href="#" class="font-bold text-lg mt-8 mb-4">Connect </a>
+
+            <a
+              href="#"
+              class="hover:underline hover:my-1 ease-linear transition-all"
+              >Contacts</a
+            >
+            <a
+              href="#"
+              class="hover:underline hover:my-1 ease-linear transition-all"
+              >Newsletter</a
+            >
+            <a
+              href="#"
+              class="hover:underline hover:my-1 ease-linear transition-all"
+              >LinkedIn</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/flowbite@1.5.1/dist/flowbite.js"></script>
+    <script src="./script.js"></script>
+  </body>
 </html>
+<!-- # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Light red (CTA text): "hsl(356, 100%, 66%)"
+- VeryLightRed_CTA hover_background : hsl(355, 100%, 74%)
+- VeryDarkBlue_headings : hsl(208, 49%, 24%)
+
+### Neutral
+
+- White (text): hsl(0, 0%, 100%)
+- GrayishBlue_footer text : hsl(240, 2%, 79%)
+- VeryDarkGrayishBlue_bodyCopy : hsl(207, 13%, 34%)
+- VeryDarkBlackBlue_footerBackground : hsl(240, 10%, 16%)
+
+### Gradient
+
+Background gradient - Intro/CTA mobile nav:
+
+- Very light red: hsl(13, 100%, 72%)
+- Light red: hsl(353, 100%, 62%)
+
+Background gradient - body:
+
+- Very dark gray blue: hsl(237, 17%, 21%)
+- Very dark desaturated blue: hsl(237, 23%, 32%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 16px
+
+### Fonts
+
+- Family: [Overpass](https://fonts.google.com/specimen/Overpass?preview.text_type=custom)
+- Weights: 300, 600
+
+- Family: [Ubuntu](https://fonts.google.com/specimen/Ubuntu?preview.text_type=custom)
+- Weights: 400, 500, 700
+ -->
